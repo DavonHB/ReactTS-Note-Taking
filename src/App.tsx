@@ -4,6 +4,23 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import { NewNote } from './NewNote'
 
+// Note data with an id attached
+export type Note = {
+  id: string
+} & NoteData
+
+// Data for our form
+export type NoteData = {
+  title: string
+  markdown: string
+  tags: Tag[]
+}
+
+export type Tag = {
+  id: string
+  label: string
+}
+
 function App() {
 
   return (
